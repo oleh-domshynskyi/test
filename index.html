@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>eDashLight</title>
+</head>
+
+<body>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-3  navbar-container">
+            <nav class="navbar navbar-expand-md navbar-light p-0">
+               <a class="navbar-brand d-flex" href="#">
+                  <div class="e-letter">e</div>
+                  <div class="dash-word">Dash</div>
+                  <div class="light-word">Light</div>
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse text-right mt-4" id="navbar">
+                  <ul class="navbar-nav ">
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-1">Revenues</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-2">Gross Profit MMAs</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-3">Total Web Sessions</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-4">Web Sales</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-5">avg order sizes</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-5">new customer sales order</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-5">sales orders counts</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-5">total web sessions</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-5">visitor web sessions</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link bubble" href="#link-5">web forms submissions</a>
+                     </li>
+
+                     <li class="nav-item mt-5">
+                        <a class="nav-link" href="#link-1">settings <img class="ml-2 mb-1"
+                              src="images/setting-picture.svg"></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#link-1">logout <img class="ml-2 mb-1"
+                              src="images/log-out-picture.svg"></a>
+                     </li>
+                  </ul>
+
+
+               </div>
+            </nav>
+         </div>
+         <div class="col-md-9  content-container d-flex justify-content-center">
+            <div class="main-container">
+               <button id="" class="btn btn-outline-primary  mt-4 button-filter">+ FILTERS</button>
+
+               <div class="filter-information justify-content-center align-items-center">
+                  <div class="filter-information-container d-flex flex-column justify-content-around">
+                     <div class="filter-year-container d-flex justify-content-between">
+                        <div class="filter-year text-center">
+                           2018
+                        </div>
+                        <div class="filter-year text-center">
+                           2019
+                        </div>
+                        <div class="filter-year text-center">
+                           2020
+                        </div>
+                     </div>
+
+                     <div class="checkbox-container d-flex justify-content-between">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="q1">
+                           <label class="form-check-label" for="q1">
+                              Q1
+                           </label>
+                        </div>
+
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="q2">
+                           <label class="form-check-label" for="q2">
+                              Q2
+                           </label>
+                        </div>
+
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="q3">
+                           <label class="form-check-label" for="q3">
+                              Q3
+                           </label>
+                        </div>
+
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="q4">
+                           <label class="form-check-label" for="q4">
+                              Q4
+                           </label>
+                        </div>
+                     </div>
+
+                     <div class="button-container d-flex justify-content-between">
+                        <button class="btn btn-outline-primary">SHOW</button>
+                        <button class="btn btn-outline-primary">COMPARE</button>
+                        <button class="btn btn-outline-primary">MONTH TO DATE</button>
+                        <button class="btn btn-outline-primary">YEAR TO DATE</button>
+                     </div>
+
+                  </div>
+               </div>
+               <div class="graph-container mt-3">
+                  <canvas id="myChart"></canvas>
+               </div>
+            </div>
+            </main>
+
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+               integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+               crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+               crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+               integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw=="
+               crossorigin="anonymous"></script>
+            <script src="js/buttonFilter.js"></script>
+            <script src="js/graph.js"></script>
+</body>
+
+</html>
